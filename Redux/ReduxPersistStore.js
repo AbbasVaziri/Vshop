@@ -3,13 +3,6 @@ import shoppingCartReducer from "../Redux/features/shoppingCart/ShoppingCartSlic
 import { persistReducer, persistStore } from "redux-persist";
 import useReducer from "../Redux/features/users/UsersSlice";
 import localStorageLib from "redux-persist/lib/storage";
-import sessionStorageLib from "redux-persist/lib/storage/session";
-
-// Configuration for redux-persist
-// const configuration = {
-//   key: 'globalstorage',
-//   storage,
-// }
 
 const localStorageConfiguration = {
   key: "root",
@@ -17,14 +10,9 @@ const localStorageConfiguration = {
   blacklist: ["user"],
 };
 
-const sessionStorageConfiguration = {
-  key: "user",
-  storage: sessionStorageLib,
-};
-
 const rootReducer = combineReducers({
   shoppingCart: shoppingCartReducer,
-  user: persistReducer(sessionStorageConfiguration, useReducer),
+  user: persistReducer(localStorageConfiguration, useReducer),
 });
 
 const persistedReducer = persistReducer(localStorageConfiguration, rootReducer);

@@ -4,7 +4,8 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
 import { IoIosArrowBack, IoMdArrowForward } from "react-icons/io";
-import { POST } from "@/repository/AxiosRepository";
+import { useSelector, useDispatch } from 'react-redux'
+import { loginUser } from "@/Redux/features/users/UsersSlice";
 
 const FORM_STEPS = {
   USERNAME: "username",
@@ -13,6 +14,8 @@ const FORM_STEPS = {
 
 const login = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
+  // const [loginStatus, setLoginStatus] = useState(null);
+  const dispatch = useDispatch()
 
   const validationSchemaUsername = Yup.object({
     username: Yup.string()
@@ -40,16 +43,26 @@ const login = () => {
     password: "",
   };
 
-  const onSubmitUsername = (values) => {
+  const onSubmitUsername = () => {
     setFormStep(FORM_STEPS.PASSWORD);
   };
 
   const onSubmitPassword = (values) => {
-    console.log("Password submitted with values:", values);
-    POST("/users/login", {
-      username: values.username,
-      password: values.password,
-    });
+    // console.log("Password submitted with values:", values);
+    // POST("/users/login", {
+    //   username: values.username,
+    //   password: values.password,
+    // }).then((res) => {
+    //   const responseData = res.data;
+    //   if (responseData.success) {
+    //     // Do something when login is successful
+    //     console.log("Login successful!");
+    //   } else {
+    //     // Do something when login fails
+    //     console.log("you can not login");
+    //   }
+    // });
+    dispatch(loginUser(values))
   };
 
   const userNameForm = (formikProps) => {
