@@ -14,11 +14,6 @@ const FORM_STEPS = {
 const login = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
 
-  const initialValues = {
-    username: '',
-    password: '',
-  };
-
   const validationSchemaUsername = Yup.object({
     username: Yup.string().required("Username is required"),
   });
@@ -41,12 +36,15 @@ const login = () => {
 
   const onSubmitPassword = (values) => {
     console.log("Password submitted with values:", values);
-    POST('/users/login' ,  {username:values.username , password:values.password})
+    POST("/users/login", {
+      username: values.username,
+      password: values.password,
+    });
   };
 
   const userNameForm = (formikProps) => {
     return (
-      <div className={styles["login-signup-container"]}>
+      <div className={styles["login-container"]}>
         <div className={styles["logo-wrapper"]}>
           <img
             src="https://www.digikala.com/statics/img/svg/logo.svg"
@@ -61,7 +59,7 @@ const login = () => {
           <span className={styles["instruction-text"]}>
             لطفا شماره موبایل یا ایمیل خود را وارد کنید
           </span>
-          <div>
+          <div className={styles["auth-form-container"]}>
             <Field
               className={styles["user-input"]}
               type="text"
@@ -101,54 +99,54 @@ const login = () => {
         <div className={styles["authentication-content"]}>
           <h3 className={styles["auth-title"]}>رمز عبور را وارد کنید</h3>
         </div>
-        <Field
-          className={styles["user-input-password"]}
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Enter your password"
-        />
-        <div className={styles["another-way-enter"]}>
-          <span>ورود با رمز یکبار مصرف</span>
-          <IoIosArrowBack />
-          <span>فراموشی رمز عبور</span>
-          <IoIosArrowBack />
+        <div className={styles["auth-form-container"]}>
+          <Field
+            className={styles["user-input-password"]}
+            type="password"
+            name="password"
+            id="password"
+            placeholder=""
+          />
+          <div className={styles["another-way-enter"]}>
+            <span>ورود با رمز یکبار مصرف</span>
+            <IoIosArrowBack />
+            <span>فراموشی رمز عبور</span>
+            <IoIosArrowBack />
+          </div>
+          <button type="submit" className={styles["login-btn-password"]}>
+            تایید
+          </button>
         </div>
-        <button
-          type="submit"
-          className={styles["login-btn-password"]}
-        >
-          تایید
-        </button>
       </div>
     );
   };
 
   return (
     <div className={styles["main-wrapper"]}>
-
       <Formik
         initialValues={
           formStep === FORM_STEPS.USERNAME
-          ? initialValuesUsername
-          : initialValuesPassword
+            ? initialValuesUsername
+            : initialValuesPassword
         }
         validationSchema={
           formStep === FORM_STEPS.USERNAME
-          ? validationSchemaUsername
-          : validationSchemaPassword
+            ? validationSchemaUsername
+            : validationSchemaPassword
         }
         onSubmit={
           formStep === FORM_STEPS.USERNAME ? onSubmitUsername : onSubmitPassword
         }
-        >
+      >
         {(formikProps) => (
           <Form>
-          {formStep === FORM_STEPS.USERNAME ? userNameForm(formikProps) : passwordForm()}
-        </Form>
+            {formStep === FORM_STEPS.USERNAME
+              ? userNameForm(formikProps)
+              : passwordForm()}
+          </Form>
         )}
       </Formik>
-        </div>
+    </div>
   );
 };
 
