@@ -1,0 +1,24 @@
+/* * @format
+
+.main {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;  
+  }
+
+  .arrow-left {
+    background-color: white;
+    border-radius: 50px;
+  }
+  
+  .arrow-right {
+      background-color: white;
+      border-radius: 50px;
+  }
+  
+  .arrow-right_container {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+   */

@@ -1,0 +1,128 @@
+.main-wrapper {
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-signup-container {
+  height: 480px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  margin: auto;
+  display: flex;
+  width: 60%;
+}
+
+.authentication-content {
+  direction: rtl;
+  padding: 20px 0;
+}
+
+.authentication-content h3 {
+  font-size: 26px;
+  padding: 16px 0;
+}
+
+.authentication-content span {
+  font-size: 14px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-input {
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  direction: rtl;
+  border: 1px solid #ef4056;
+  transition: border-color 0.3s;
+  padding-right: 10px;
+}
+
+.user-input:focus {
+  border-color: blue;
+}
+
+.login-btn {
+  margin-top: 40px;
+  height: 50px;
+  background-color: #ef4056;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.terms-agreement {
+  direction: rtl;
+  white-space: nowrap;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+.terms-link,
+.privacy-link {
+  text-decoration: none;
+}
+
+.arrow-forward {
+  font-size: 28px;
+  cursor: pointer;
+}
+ 
+.login-container{
+  height: 410px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.user-input-password {
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  direction: rtl;
+  border: 1px solid #ef4056;
+  transition: border-color 0.3s;
+  padding-right: 10px;
+}
+
+.another-way-enter {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 50%;
+  align-items: center;
+  gap: 4px;
+  color: #19bfd3;
+  flex-wrap: wrap;
+  margin-left: auto;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-btn-password {
+  margin-top: 15px;
+  height: 50px;
+  background-color: #ef4056;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}

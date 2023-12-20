@@ -1,0 +1,11 @@
+.outer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    color:#fff;
+    padding: 0.5em 3em;
+    border-radius: 5px;
+    margin-top: 1em;
+    cursor: pointer;
+}

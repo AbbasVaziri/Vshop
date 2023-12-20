@@ -1,0 +1,17 @@
+.slider-container {
+  margin-top: 5px;
+  &:hover {
+    .arrow {
+      display: inline;
+    }
+  }
+}
+
+.slider-images {
+  width: 100%;
+  height: auto;
+}
+
+.arrow {
+  display: none;
+}

@@ -1,0 +1,27 @@
+.container-arrow {
+  display: flex;
+  justify-content: end;
+}
+
+.next-arrow {
+  font-size: 50px;
+  position: absolute;
+  top: 75%;
+  z-index: 1;
+  right: 6%;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.previous-arrow {
+  font-size: 50px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 75%;
+  z-index: 1;
+  cursor: pointer;
+  right: 2%;
+}
+

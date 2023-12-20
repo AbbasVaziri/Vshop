@@ -1,0 +1,13 @@
+.outer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.container-left{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+

@@ -1,0 +1,63 @@
+
+.left-container {
+    width: 40%;
+  }
+  
+  .detail-sabad-kharid {
+    width: 90%;
+    margin-right: auto;
+    border-radius: 10px;
+    outline: 1px solid #c2c2c7;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .all-price {
+    display: flex;
+    justify-content: space-between;
+    color: #62666d;
+    font-size: 12px;
+  }
+  
+  .all-price h3::after{
+    content: " تومان";
+  
+  }
+  
+  .sum-products {
+    display: flex;
+    justify-content: space-between;
+    color: #23254e;
+    font-size: 12px;
+  }
+  
+  .sum-products h3::after{
+    content: " تومان";
+  
+  }
+  
+  .sode-shoma {
+    display: flex;
+    justify-content: space-between;
+    color: #ef4056;
+    font-size: 12px;
+  }
+  
+  .order {
+    width: 70%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ef4056;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

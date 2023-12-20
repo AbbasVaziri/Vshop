@@ -1,0 +1,16 @@
+.container-Category {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Section-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+}
+
+.container-image {
+    height: 60px;   
+    width: 60px;
+}

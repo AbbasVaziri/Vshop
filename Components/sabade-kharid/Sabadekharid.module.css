@@ -1,0 +1,11 @@
+.icon {
+  font-size: 30px;
+  margin-left: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.pipe {
+  font-size: 30px;
+  color: #000;
+}

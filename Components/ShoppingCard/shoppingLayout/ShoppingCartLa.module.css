@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.header h1 {
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.header-active {
+  border-bottom: 4px solid #ef4056;
+  padding-bottom: 5px;
+}
+
+.icon-menu {
+  cursor: pointer;
+}
+
+.outer-container {
+  display: flex;
+  direction: rtl;
+}
+
+.right-container {
+  width: 100%;
+  outline: 1px solid #c2c2c7;
+  border-radius: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  padding-right: 30px;
+}
+
+.sabad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  line-height: 2;
+  padding: 30px;
+}
+
+.sabad-kharid-product img {
+  width: 150px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.content-container h3::after {
+  content: "تومان";
+  margin-right: 5px;
+}
+
+.left-container {
+  width: 40%;
+}
+
+.detail-sabad-kharid {
+  width: 90%;
+  margin-right: auto;
+  border-radius: 10px;
+  outline: 1px solid #c2c2c7;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.all-price {
+  display: flex;
+  justify-content: space-between;
+  color: #62666d;
+  font-size: 12px;
+}
+
+.all-price h3::after {
+  content: " تومان";
+}
+
+.sum-products {
+  display: flex;
+  justify-content: space-between;
+  color: #23254e;
+  font-size: 12px;
+}
+
+.sum-products h3::after {
+  content: " تومان";
+}
+
+.sode-shoma {
+  display: flex;
+  justify-content: space-between;
+  color: #ef4056;
+  font-size: 12px;
+}
+
+.order {
+  width: 70%;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ef4056;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
