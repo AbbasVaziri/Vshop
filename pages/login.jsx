@@ -15,7 +15,17 @@ const login = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
 
   const validationSchemaUsername = Yup.object({
-    username: Yup.string().required("Username is required"),
+    username: Yup.string()
+      .test(
+        "email-or-phone-number",
+        "لطفا یک ایمیل معتبر یا یک شماره تلفن معتبر وارد کنید.",
+        (value) => {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const phoneNumberRegex = /^(09)\d{9}$/;
+          return emailRegex.test(value) || phoneNumberRegex.test(value);
+        },
+      )
+      .required("لطفا این قسمت را خالی نگذارید."),
   });
 
   const validationSchemaPassword = Yup.object({

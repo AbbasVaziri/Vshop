@@ -1,136 +1,132 @@
 .main-wrapper {
-  height: 65vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-container {
-  width: 420px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  padding: 40px;
+    width: 420px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 40px;
 }
 
 .logo-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .brand-logo {
-  margin: auto;
-  display: flex;
-  width: 60%;
+    margin: auto;
+    display: flex;
+    width: 60%;
 }
 
 .authentication-content {
-  direction: rtl;
-  padding: 20px 0;
+    direction: rtl;
+    padding: 20px 0;
 }
 
 .auth-title {
-  font-size: 26px;
-  padding: 16px 0;
+    font-size: 26px;
+    padding: 16px 0;
 }
 
 .greeting-text {
-  font-size: 14px;
+    font-size: 16px;
 }
 
 .auth-form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.instruction-text{
+.instruction-text {
 }
 
-.auth-form-container{
-  display: flex;
-  flex-direction: column;
+.auth-form-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .user-input {
-  height: 50px;
-  direction: rtl;
-  border-radius: 10px;
-  padding-right: 10px;
-  margin-top: 20px;
-  border: 1px solid #ef4056;
-  transition: border-color 0.3s;
-}
-
-.user-input:focus {
-  border-color: blue;
+    height: 50px;
+    direction: rtl;
+    border-radius: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    border: 1px solid #008eb2;
+    transition: border-color 0.3s;
 }
 
 .login-btn {
-  margin-top: 20px;
-  height: 50px;
-  background-color: #ef4056;
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #fff;
+    margin-top: 20px;
+    height: 50px;
+    background-color: #ef4056;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
 }
 
 .terms-agreement {
-  direction: rtl;
-  white-space: nowrap;
-  font-size: 13px;
-  display: flex;
-  justify-content: center;
+    direction: rtl;
+    white-space: nowrap;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
 }
 
 .terms-link,
 .privacy-link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .arrow-forward {
-  font-size: 28px;
-  cursor: pointer;
+    font-size: 28px;
+    cursor: pointer;
 }
- 
-.login-container{
-  height: 410px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  padding: 40px;
+
+.login-container {
+    height: 420px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 40px;
 }
 
 .user-input-password {
-  height: 50px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  direction: rtl;
-  border: 1px solid #ef4056;
-  transition: border-color 0.3s;
-  padding-right: 10px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    direction: rtl;
+    border: 1px solid #008eb2;
+    transition: border-color 0.3s;
+    padding-right: 10px;
 }
 
 .another-way-enter {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 50%;
-  align-items: center;
-  gap: 4px;
-  color: #19bfd3;
-  flex-wrap: wrap;
-  margin-left: auto;
-  font-size: 14px;
-  cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 50%;
+    align-items: center;
+    gap: 4px;
+    color: #19bfd3;
+    flex-wrap: wrap;
+    margin-left: auto;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .login-btn-password {
-  margin-top: 15px;
-  height: 50px;
-  background-color: #ef4056;
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #fff;
+    margin-top: 15px;
+    height: 50px;
+    background-color: #ef4056;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
 }
