@@ -11,9 +11,11 @@ export const loginUser = createAsyncThunk(
     "user/loginUser",
     async (values) => {
       try {
-        const response = await  POST("/users/login", values)
-        return response.data;
+        const response = await POST("/users/login", values)
+          console.log(response)
+          return response.data;
       } catch (error) {
+          console.log(error.message)
         return error.message;
       }
     }
