@@ -9,14 +9,13 @@ import { PersistGate } from "redux-persist/integration/react";
 import { useEffect, useState } from "react";
 import Spinner from "@/Components/loading/Spinner";
 
-
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000); 
+    }, 2000);
   }, []);
 
   return (

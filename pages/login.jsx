@@ -6,6 +6,7 @@ import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupE
 import { IoIosArrowBack, IoMdArrowForward } from "react-icons/io";
 import { useSelector, useDispatch } from 'react-redux'
 import { loginUser } from "@/Redux/features/users/UsersSlice";
+import {useRouter} from "next/router";
 
 const FORM_STEPS = {
   USERNAME: "username",
@@ -14,8 +15,9 @@ const FORM_STEPS = {
 
 const login = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
-  // const [loginStatus, setLoginStatus] = useState(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const {token} = useSelector((state) => state.user)
+  const router = useRouter()
 
   const validationSchemaUsername = Yup.object({
     username: Yup.string()
@@ -48,21 +50,10 @@ const login = () => {
   };
 
   const onSubmitPassword = (values) => {
-    // console.log("Password submitted with values:", values);
-    // POST("/users/login", {
-    //   username: values.username,
-    //   password: values.password,
-    // }).then((res) => {
-    //   const responseData = res.data;
-    //   if (responseData.success) {
-    //     // Do something when login is successful
-    //     console.log("Login successful!");
-    //   } else {
-    //     // Do something when login fails
-    //     console.log("you can not login");
-    //   }
-    // });
     dispatch(loginUser(values))
+    if(token){
+      router.push('/')
+    }
   };
 
   const userNameForm = (formikProps) => {

@@ -1,9 +1,9 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import styles from './AddToShoppingCart.module.css'
-import { addNewItem } from '@/Redux/features/shoppingCart/ShoppingCartSlice';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styles from "./AddToShoppingCart.module.css";
+import { addNewItem } from "@/Redux/features/shoppingCart/ShoppingCartSlice";
 
-const ShoppingCartItemCounter = ({product}) => {
+const ShoppingCartItemCounter = ({ product }) => {
   const dispatch = useDispatch();
 
   const clickHandler = () => {
@@ -11,7 +11,7 @@ const ShoppingCartItemCounter = ({product}) => {
   };
 
   return (
-    <div className={styles['outer-container']}  onClick={clickHandler}>
+    <div className={styles["outer-container"]} onClick={clickHandler}>
       <span>خرید</span>
     </div>
   );

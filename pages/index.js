@@ -4,7 +4,6 @@ import ShopByCategory from "@/Components/Shop-by-category/ShopByCategory";
 import AmazingSuperMarket from "@/Components/amazingSupermarket/AmazingSuperMarket";
 import IncredibleOffers from "@/Components/incredibleOffers/IncredibleOffers";
 import MainSliderSwiper from "@/Components/mainSlider/MainSliderSwiper";
-import OfferDigi from "@/Components/offerdigi/OfferDigi";
 import Context from "@/contextApi/Context";
 import { GETT } from "@/repository/FetchApiRepository";
 
@@ -19,7 +18,6 @@ export default function Home(props) {
       <AmazingSuperMarket />
       <ProductImagesUnderAmazing />
       <ShopByCategory />
-      {/* <OfferDigi/> */}
     </>
   );
 }
@@ -40,11 +38,3 @@ export async function getStaticProps(context) {
   };
 }
 
-// import Carusel from "@/Components/carusel/Carusel";
-// import MainSlider from "@/Components/mainSlider/MainSlider";
-{
-  {
-    /* <MainSlider /> */
-  }
-  /* <MainSliderSwiper/> */
-}
