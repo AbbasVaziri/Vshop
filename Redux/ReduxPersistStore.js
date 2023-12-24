@@ -1,7 +1,7 @@
-const { configureStore, combineReducers } = require("@reduxjs/toolkit");
+import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import shoppingCartReducer from "../Redux/features/shoppingCart/ShoppingCartSlice";
 import { persistReducer, persistStore } from "redux-persist";
-import useReducer from "../Redux/features/users/UsersSlice";
+import useReducer from "@/Redux/features/user/UsersSlice";
 import localStorageLib from "redux-persist/lib/storage";
 
 const localStorageConfiguration = {

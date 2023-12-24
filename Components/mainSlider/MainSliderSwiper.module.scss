@@ -1,10 +1,10 @@
 .slider-container {
   margin-top: 5px;
-  &:hover {
-    .arrow {
-      display: inline;
-    }
-  }
+}
+
+.slider-container:hover .arrow {
+  animation: none;
+  display: inline;
 }
 
 .slider-images {
@@ -14,4 +14,9 @@
 
 .arrow {
   display: none;
+  position: absolute;
+  top: 78%;
+  right: 2%;
+  z-index: 1;
+  cursor: pointer;
 }

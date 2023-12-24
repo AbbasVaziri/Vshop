@@ -3,12 +3,16 @@ import Link from "next/link";
 import styles from "./Profile.module.css";
 import { IoEnterOutline } from "react-icons/io5";
 import Cookies from "js-cookie";
+import { PiUserCircleThin } from "react-icons/pi";
+import ExitProfile from "@/Components/userProfile/ExitProfile";
 
 const Profile = () => {
   return (
     <div className={styles["user-conatiner"]}>
       {Cookies.get("token") ? (
-        <h1>خروج</h1>
+        <div className={styles['icon-profile']}>
+          <PiUserCircleThin />
+        </div>
       ) : (
         <Link href={"/login"}>
           <div className={styles["container-left-header"]}>

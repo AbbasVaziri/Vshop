@@ -5,8 +5,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
 import { IoIosArrowBack, IoMdArrowForward } from "react-icons/io";
 import { useSelector, useDispatch } from 'react-redux'
-import { loginUser } from "@/Redux/features/users/UsersSlice";
+import { loginUser } from "@/Redux/features/user/UsersSlice";
 import {useRouter} from "next/router";
+import Cookies from "js-cookie";
+import {BeatLoader} from "react-spinners";
 
 const FORM_STEPS = {
   USERNAME: "username",
@@ -16,8 +18,7 @@ const FORM_STEPS = {
 const login = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
   const dispatch = useDispatch();
-  const {token} = useSelector((state) => state.user)
-  const router = useRouter()
+  const {loginUserLoading} = useSelector((state) => state.user)
 
   const validationSchemaUsername = Yup.object({
     username: Yup.string()
@@ -50,10 +51,7 @@ const login = () => {
   };
 
   const onSubmitPassword = (values) => {
-    dispatch(loginUser(values))
-    if(token){
-      router.push('/')
-    }
+    dispatch(loginUser(values));
   };
 
   const userNameForm = (formikProps) => {
@@ -127,9 +125,16 @@ const login = () => {
             <span>فراموشی رمز عبور</span>
             <IoIosArrowBack />
           </div>
+          {
+              loginUserLoading ?
+                <div className={styles['loading-icon']}>
+                <BeatLoader size={10} color={'#fff'} />
+                </div>
+                :
           <button type="submit" className={styles["login-btn-password"]}>
             تایید
           </button>
+          }
         </div>
       </div>
     );

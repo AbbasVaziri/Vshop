@@ -1,27 +1,32 @@
 .container-arrow {
   display: flex;
   justify-content: end;
+  gap: 10px;
 }
 
-.next-arrow {
-  font-size: 50px;
-  position: absolute;
-  top: 75%;
-  z-index: 1;
-  right: 6%;
-  background-color: white;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
+.next-arrow,
 .previous-arrow {
-  font-size: 50px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
   border-radius: 50%;
-  background-color: white;
-  position: absolute;
-  top: 75%;
-  z-index: 1;
   cursor: pointer;
-  right: 2%;
 }
 
+
+/*.next-arrow {*/
+/*  right: 6%;*/
+/*}*/
+
+/*.previous-arrow {*/
+/*  right: 2%;*/
+/*}*/
+
+/*.next-arrow:hover,*/
+/*.previous-arrow:hover {*/
+/*  display: inline;*/
+/*}*/

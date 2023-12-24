@@ -16,3 +16,9 @@
     font-size: 24px;
     rotate: 180deg;
 }
+
+.icon-profile{
+    display: flex;
+    font-size: 44px;
+    cursor: pointer;
+}

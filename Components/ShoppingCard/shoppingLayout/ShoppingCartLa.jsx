@@ -40,6 +40,7 @@ const ShoppingCartLa = () => {
                       </div>
                       <ShoppingCartItemCounter productId={item.id} />
                     </div>
+                    //todo: write better css for counter
                   );
                 })}
               </div>

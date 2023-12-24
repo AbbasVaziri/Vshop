@@ -8,11 +8,17 @@ const Arrow = () => {
 
   return (
       <div className={styles["container-arrow"]}>
-        <button onClick={() => swiper.slideNext()}>
-          <GoChevronLeft className={styles['next-arrow']} />
+        <button
+            className={styles['next-arrow']}
+            onClick={() => swiper.slideNext()}
+        >
+          <GoChevronLeft />
         </button>
-        <button onClick={() => swiper.slidePrev()}>
-          <GoChevronRight className={styles['previous-arrow']}/>
+        <button
+            className={styles['previous-arrow']}
+            onClick={() => swiper.slidePrev()}
+        >
+          <GoChevronRight />
         </button>
       </div>
   );

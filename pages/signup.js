@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux"; // Assuming you are using Redux for state management
 import Cookies from "js-cookie"; // Make sure to import the correct library for cookies
 import { useRouter } from "next/router"; // Assuming you are using Next.js for routing
-import { setToken } from "@/Redux/features/users/UsersSlice"; // Replace with your actual Redux action for setting the token
+import { setToken } from "@/Redux/features/user/UsersSlice"; // Replace with your actual Redux action for setting the token
 import styles from "./Login.module.css";
 import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
 import { POST } from "@/repository/AxiosRepository";

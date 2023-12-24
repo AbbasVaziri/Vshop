@@ -1,5 +1,3 @@
-/** @format */
-
 import Header from "@/Components/header/Header";
 import "../styles/globals.css";
 import Footer from "@/Components/footer/Footer";

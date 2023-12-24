@@ -1,23 +1,14 @@
-  import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import Cookies from "js-cookie";
 
-export const config = {
-  matcher: "/admin/:path*",
-};
+export function middleware(request) {
+  const token = Cookies.get('token');
+  const url = request.nextUrl.clone();
 
-export default function middleware(request) {
+  if (url.pathname === '/login' && token) {
+    url.pathname = '/';  // Redirect to home if logged in
+    return NextResponse.redirect('/');
+  }
 
-
+  return NextResponse.next();
 }
-
-  // const token = request.cookies.get("token");
-  // const { origin, pathname } = request.nextUrl;
-  //
-  //
-  //
-  //
-  // if (token === undefined) {
-  //   request.cookies.set("originalUrl", pathname);
-  //   return NextResponse.redirect(`${origin}/login`);
-  // }
-  //
-  // return NextResponse.next();
