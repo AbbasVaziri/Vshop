@@ -1,5 +1,3 @@
-/** @format */
-
 .main-footer {
   max-width: 1676px;
   margin: 0 auto;
@@ -43,7 +41,6 @@
   display: none;
 }
 .main-footer .footer-container .details-support p {
-  font-family: Vaziri-Light;
   font-size: 0.78rem;
   line-height: 25px;
   color: #3f4064;
@@ -80,7 +77,6 @@
   .register-box
   div:first-child
   h3 {
-  font-family: Vaziri-Light;
   color: #3f4064;
   font-size: 1rem;
 }
@@ -160,12 +156,10 @@
   line-height: 35px;
 }
 .main-footer .footer-container .register-and-questions .question-box h4 {
-  font-family: Vaziri-Light;
   color: #3f4064;
   font-size: 0.9rem;
 }
 .main-footer .footer-container .register-and-questions .question-box a {
-  font-family: Vaziri-Light;
   color: #767790;
   font-size: 0.81rem;
 }
@@ -263,7 +257,6 @@
   direction: rtl;
 }
 .main-footer .footer-container .about-digikala .description h5 {
-  font-family: Vaziri-Light;
   margin-bottom: 15px;
   font-size: 0.85rem;
 }
@@ -292,7 +285,6 @@
   padding: 30px 0;
   color: #767790;
   font-size: 0.6rem;
-  font-family: Vaziri-Light;
 }
 .main-footer .companies {
   background-color: #e0e0e6;
@@ -337,7 +329,6 @@
   .main-footer .footer-container .digikala-option a p {
     color: #3f4064;
     font-size: 0.75rem;
-    font-family: Vaziri-Light;
     direction: rtl;
   }
   .main-footer .footer-container .digikala-option a .img-container {
@@ -408,7 +399,6 @@
     div:last-child
     h3 {
     color: #3f4064;
-    font-family: Vaziri-Light;
     font-size: 1rem;
     margin-bottom: 15px;
     margin-top: 10px;
@@ -506,7 +496,6 @@
     width: 50%;
   }
   .main-footer .footer-container .about-digikala .description h5 {
-    font-family: Vaziri-Light;
     margin-bottom: 15px;
     font-size: 0.9rem;
   }

@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {useRouter} from "next/router";
 import {BeatLoader} from "react-spinners";
 
-import { loginUser } from "@/Redux/features/user/UsersSlice";
+import { loginUser, resetError } from "@/Redux/features/user/UsersSlice";
 import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
 
 import styles from "./Login.module.css";
@@ -28,7 +28,10 @@ const index = () => {
     if (isAuthenticated) {
       router.push('/');
     }
-  }, [isAuthenticated, router]);
+    return () => {
+      dispatch(resetError());
+    };
+  }, [isAuthenticated, router, dispatch]);
 
   const validationSchemaUsername = Yup.object({
     username: Yup.string()
@@ -115,7 +118,10 @@ const index = () => {
           />
           <IoMdArrowForward
             className={styles["arrow-forward"]}
-            onClick={() => setFormStep(FORM_STEPS.USERNAME)}
+            onClick={() => {
+              setFormStep(FORM_STEPS.USERNAME);
+              dispatch(resetError());
+            }}
           />
         </div>
         <div className={styles["authentication-content"]}>
@@ -129,32 +135,28 @@ const index = () => {
             id="password"
             placeholder=""
           />
-          {
-            error ?
-          <h1>
-            <div className={styles['error-enter-user']}>
-              <p>{error}</p>
-            </div>
-          </h1>
-                :
-                null
-          }
+          {error ? (
+            <h1>
+              <div className={styles["error-enter-user"]}>
+                <p>{error}</p>
+              </div>
+            </h1>
+          ) : null}
           <div className={styles["another-way-enter"]}>
             <span>ورود با رمز یکبار مصرف</span>
             <IoIosArrowBack />
             <span>فراموشی رمز عبور</span>
             <IoIosArrowBack />
           </div>
-          {
-              loginUserLoading ?
-                <div className={styles['loading-icon']}>
-                <BeatLoader size={10} color={'#fff'} />
-                </div>
-                :
-          <button type="submit" className={styles["login-btn-password"]}>
-            تایید
-          </button>
-          }
+          {loginUserLoading ? (
+            <div className={styles["loading-icon"]}>
+              <BeatLoader size={10} color={"#fff"} />
+            </div>
+          ) : (
+            <button type="submit" className={styles["login-btn-password"]}>
+              تایید
+            </button>
+          )}
         </div>
       </div>
     );

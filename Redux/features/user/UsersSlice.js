@@ -25,7 +25,11 @@
   const userSlice = createSlice({
     name: "user",
     initialState: INITIAL_STATE,
-    reducers: {},
+    reducers: {
+      resetError: (state) => {
+        state.error = '';
+      },
+    },
     extraReducers: {
       [loginUser.pending]: (state) => {
         state.loginUserLoading = true;
@@ -44,5 +48,6 @@
     },
   });
 
-  export const {} = userSlice.actions;
+
+  export const { resetError } = userSlice.actions;
   export default userSlice.reducer;
