@@ -29,6 +29,9 @@
       resetError: (state) => {
         state.error = '';
       },
+      logout: (state) => {
+        state.token = null;
+      },
     },
     extraReducers: {
       [loginUser.pending]: (state) => {
@@ -49,5 +52,5 @@
   });
 
 
-  export const { resetError } = userSlice.actions;
+  export const { resetError, logout } = userSlice.actions;
   export default userSlice.reducer;
