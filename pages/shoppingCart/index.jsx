@@ -5,7 +5,7 @@ import ShoppingCartLa from "@/Components/ShoppingCard/shoppingLayout/ShoppingCar
 const shoppingCart = () => {
   return (
     <div className={styles["outer-container"]}>
-      <div className={styles["conatinr-shoppingcard"]}>
+      <div className={styles["container-shopping-card"]}>
         <ShoppingCartLa />
       </div>
       <div></div>
@@ -15,6 +15,4 @@ const shoppingCart = () => {
 
 export default shoppingCart;
 
-{
-  /* <ShoppingCardItem/> */
-}
+

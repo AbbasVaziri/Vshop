@@ -12,7 +12,6 @@ export function NextArrow(props) {
         height: "50px",
         margin: "auto",
         zIndex: "10000",
-        color: "black",
         marginRight:"10px",
         color:"white"
       }}
@@ -30,9 +29,7 @@ export function PrevArrow(props) {
         width: "50px",
         margin: "auto",
         height: "50px",
-        marginLeft: "10px",
         zIndex: "10000",
-        color: "black",
         marginLeft:"15px",
         color:"white"
       }}

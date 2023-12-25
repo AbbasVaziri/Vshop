@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux"; // Assuming you are using Redux for s
 import Cookies from "js-cookie"; // Make sure to import the correct library for cookies
 import { useRouter } from "next/router"; // Assuming you are using Next.js for routing
 import { setToken } from "@/Redux/features/user/UsersSlice"; // Replace with your actual Redux action for setting the token
-import styles from "./Login.module.css";
+import styles from "./login/Login.module.css";
 import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
 import { POST } from "@/repository/AxiosRepository";
 

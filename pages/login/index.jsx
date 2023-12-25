@@ -1,24 +1,34 @@
-import React, { useState } from "react";
-import styles from "./Login.module.css";
+import React, {useEffect, useState} from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
 import { IoIosArrowBack, IoMdArrowForward } from "react-icons/io";
 import { useSelector, useDispatch } from 'react-redux'
-import { loginUser } from "@/Redux/features/user/UsersSlice";
 import {useRouter} from "next/router";
-import Cookies from "js-cookie";
 import {BeatLoader} from "react-spinners";
+
+import { loginUser } from "@/Redux/features/user/UsersSlice";
+import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
+
+import styles from "./Login.module.css";
 
 const FORM_STEPS = {
   USERNAME: "username",
   PASSWORD: "password",
 };
 
-const login = () => {
+const index = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
   const dispatch = useDispatch();
-  const {loginUserLoading} = useSelector((state) => state.user)
+  const {loginUserLoading , error, token} = useSelector((state) => state.user);
+  const router = useRouter();
+  const isAuthenticated = !!token;
+
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push('/');
+    }
+  }, [isAuthenticated, router]);
 
   const validationSchemaUsername = Yup.object({
     username: Yup.string()
@@ -119,6 +129,16 @@ const login = () => {
             id="password"
             placeholder=""
           />
+          {
+            error ?
+          <h1>
+            <div className={styles['error-enter-user']}>
+              <p>{error}</p>
+            </div>
+          </h1>
+                :
+                null
+          }
           <div className={styles["another-way-enter"]}>
             <span>ورود با رمز یکبار مصرف</span>
             <IoIosArrowBack />
@@ -140,7 +160,7 @@ const login = () => {
     );
   };
 
-  return (
+  return !isAuthenticated ? (
     <div className={styles["main-wrapper"]}>
       <Formik
         initialValues={
@@ -166,7 +186,11 @@ const login = () => {
         )}
       </Formik>
     </div>
-  );
+  ) : null;
 };
 
-export default login;
+export default index;
+
+
+//todo: قونت فارسی برای اعداد وزیری
+//todo: وقتی که ما یوزر رو داخل لوکال نگه مبداریم و بعدش ازدوباره لاگین میخایم کنیم اگه دفغه قبل لاگین نشده باشه هنوز ارور میمونه مشکللللللللللللللل

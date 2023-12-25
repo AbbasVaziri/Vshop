@@ -6,7 +6,9 @@ import { ReduxPersistStore, persistor } from "@/Redux/ReduxPersistStore";
 import { PersistGate } from "redux-persist/integration/react";
 import { useEffect, useState } from "react";
 import Spinner from "@/Components/loading/Spinner";
+import localFont from "next/font/local";
 
+const iranSansWeb = localFont({ src: "../public/fonts/Vazirmatn-UI-FD-Regular.ttf" });
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
@@ -17,7 +19,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <div>
+    <div className={iranSansWeb.className}>
       {loading ? (
         <Spinner />
       ) : (

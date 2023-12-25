@@ -1,11 +1,16 @@
 import React from "react";
+import styles from "./ExitProfile.module.css";
+import { FaArrowRightToBracket } from "react-icons/fa6";
 
 const ExitProfile = () => {
-  // todo: crate a modal for exit user
   return (
     <>
-      <div>
-        <h3>خروج</h3>
+      <div className={styles["outer-container"]}>
+        <span className={styles["user-phoneNumber"]}>09025663672 سلام</span>
+        <span className={styles["exit-user"]}>
+              خروج از حساب کاربری
+        <FaArrowRightToBracket />
+        </span>
       </div>
     </>
   );

@@ -128,6 +128,7 @@
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
+
     color: #fff;
 }
 
@@ -140,4 +141,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.error-enter-user{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }

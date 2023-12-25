@@ -17,7 +17,6 @@ const ShoppingCardItem = () => {
       {shoppingCart.items.map((item) => {
         return <ShoppingCartSingleItem product={item} />;
       })}
-      {/* <ShoppingCartLa/> */}
     </div>
   );
 };

@@ -1,7 +1,5 @@
-/** @format */
-
 import React from 'react'
-import styles from './notfounde.module.css'
+import styles from './notFound.module.css'
 
 const notfound = () => {
   return (

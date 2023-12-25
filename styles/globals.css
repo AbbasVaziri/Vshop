@@ -1,23 +1,10 @@
-/** @format */
-
-@font-face {
-  font-family: Vaziri-Regular;
-  src: url(../public/Vazirmatn-Regular.ttf);
-}
-@font-face {
-  font-family: Vaziri-Medium;
-  src: url(../public/Vazirmatn-Light.ttf);
-}
-@font-face {
-  font-family: Vaziri-Light;
-  src: url(../public/Vazirmatn-Light.ttf);
-}
+@import url('https://v1.fontapi.ir/css/VazirFD');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Vaziri-Medium;
+  font-family: Vazir FD, sans-serif;
 }
 
 ::-webkit-scrollbar {

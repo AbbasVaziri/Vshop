@@ -7,12 +7,12 @@ import localStorageLib from "redux-persist/lib/storage";
 const localStorageConfiguration = {
   key: "root",
   storage: localStorageLib,
-  blacklist: ["user"],
+  blacklist: ["user.loginUserLoading"],
 };
 
 const rootReducer = combineReducers({
   shoppingCart: shoppingCartReducer,
-  user: persistReducer(localStorageConfiguration, useReducer),
+  user: useReducer,
 });
 
 const persistedReducer = persistReducer(localStorageConfiguration, rootReducer);
