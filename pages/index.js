@@ -33,7 +33,11 @@ export async function getStaticProps(context) {
   const incredibleOffersResponse = await incredibleOffersRequest.json();
 
   return {
-    props: { mainSliderResponse, sevenIconsResponse, incredibleOffersResponse },
+    props: {
+      mainSliderResponse,
+      sevenIconsResponse,
+      incredibleOffersResponse,
+    },
     revalidate: 600,
   };
 }

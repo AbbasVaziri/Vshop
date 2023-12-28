@@ -1,10 +1,8 @@
-/** @format */
-
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
-import styles from "./SearchBox.module.css";
 import { IoIosSearch } from "react-icons/io";
 import Link from 'next/link';
+import styles from "./SearchBox.module.css";
 
 const SearchBox = () => {
   const textForSearch = useRef("");
@@ -19,7 +17,7 @@ const SearchBox = () => {
       <div className={styles["search-bar"]}>
         <Link href="/">
         <img
-          src="https://www.digikala.com/statics/img/svg/logo.svg"
+          src={"/images/logo.svg"}
           className={styles["logo-digi"]}
           alt=""
           />

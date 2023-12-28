@@ -15,7 +15,7 @@
       try {
         const response = await POST("/users/login", values);
         if (response.data?.token) return response.data;
-        else return rejectWithValue("user is not login");
+        else return rejectWithValue("شما تا به حال ثبت نام نکردید");
       } catch (error) {
         return error.message;
       }
@@ -41,7 +41,6 @@
       [loginUser.fulfilled]: (state, action) => {
         state.token = action.payload.token;
         window.location.href= '/'
-        // Cookies.set("token", action.payload.token , {expires: 1});
       },
       [loginUser.rejected]: (state, action) => {
         state.loginUserLoading = false;

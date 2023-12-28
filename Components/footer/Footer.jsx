@@ -1,5 +1,3 @@
-/** @format */
-
 import { HiChevronLeft, HiChevronUp } from 'react-icons/hi'
 import styles from './Footer.module.css'
 import Image from 'next/image'

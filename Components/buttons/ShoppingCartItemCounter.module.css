@@ -1,11 +1,16 @@
-.outer-container{
+.outer-container {
+    width: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 0, 0);
-    color:#fff;
-    padding: 0.5em 3em;
-    border-radius: 5px;
+    color: #ef4056;
+    border: 1px solid #e0e0e2;
+    padding: 5px 15px;
+    border-radius: 10px;
     margin-top: 1em;
+    font-size: 18px;
+}
+
+.outer-container span{
     cursor: pointer;
 }

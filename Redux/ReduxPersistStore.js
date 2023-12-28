@@ -2,7 +2,7 @@ import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import localStorageLib from "redux-persist/lib/storage";
 import { persistStore, persistReducer, createTransform, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
-import shoppingCartReducer from "../Redux/features/shoppingCart/ShoppingCartSlice";
+import shoppingCartReducer from "./features/shoppingCart/ShoppingCartSlice.jsx";
 import useReducer from "@/Redux/features/user/UsersSlice";
 
 const userTransform = createTransform(
@@ -12,15 +12,13 @@ const userTransform = createTransform(
         }
         return inboundState;
     },
-    (outboundState, key) => outboundState,
-    { whitelist: ['user'] }
+    (outboundState) => outboundState,
 );
 
 const persistConfig = {
     key: 'root',
-    version: 1,
     storage:localStorageLib,
-    whitelist: ['user'],
+    whitelist: ['user' , 'shoppingCart'],
     transforms: [userTransform],
 };
 

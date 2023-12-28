@@ -1,6 +1,5 @@
 import Card from "@/Components/ShoppingCard/Card";
 import { GETT } from "@/repository/FetchApiRepository";
-import { useRouter } from "next/router";
 import React from "react";
 import styles from "./Cat.module.css";
 import CustomPagination from "@/Components/pagination/CustomPagination";

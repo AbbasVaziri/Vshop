@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { IoIosArrowBack, IoMdArrowForward } from "react-icons/io";
-import { useSelector, useDispatch } from 'react-redux'
-import {useRouter} from "next/router";
-import {BeatLoader} from "react-spinners";
+import { useSelector, useDispatch } from "react-redux";
+import { useRouter } from "next/router";
+import { BeatLoader } from "react-spinners";
 
 import { loginUser, resetError } from "@/Redux/features/user/UsersSlice";
 import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
@@ -19,14 +19,13 @@ const FORM_STEPS = {
 const index = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
   const dispatch = useDispatch();
-  const {loginUserLoading , error, token} = useSelector((state) => state.user);
+  const { loginUserLoading, error, token } = useSelector((state) => state.user);
   const router = useRouter();
   const isAuthenticated = !!token;
 
-
   useEffect(() => {
     if (isAuthenticated) {
-      router.push('/');
+      router.push("/");
     }
     return () => {
       dispatch(resetError());
@@ -72,8 +71,8 @@ const index = () => {
       <div className={styles["login-container"]}>
         <div className={styles["logo-wrapper"]}>
           <img
-            src="https://www.digikala.com/statics/img/svg/logo.svg"
-            alt="Logo"
+              src={"/images/logo.svg"}
+              alt="Logo"
             className={styles["brand-logo"]}
           />
         </div>

@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./MenuHeader.module.css";
 import { IoMenuOutline } from "react-icons/io5";
 import { FaFire } from "react-icons/fa6";
-import { MdAddCard , MdLocalOffer } from "react-icons/md";
+import { MdAddCard, MdLocalOffer } from "react-icons/md";
 import { SiMarketo } from "react-icons/si";
 import { GiPriceTag } from "react-icons/gi";
-import Link from 'next/link'
+import Link from "next/link";
 
 const MenuHeader = () => {
   return (
@@ -15,10 +15,14 @@ const MenuHeader = () => {
           <IoMenuOutline />
           <a>دسته بندی کالاها</a>
         </div>
-
         <div className={styles["incredible-container"]}>
           <MdLocalOffer />
-          <Link href="/Products/category/Harajestoon" style={{color:"black"}}>شگفت انگیز ها</Link>
+          <Link
+            href="/Products/category/Harajestoon"
+            style={{ color: "black" }}
+          >
+            شگفت انگیز ها
+          </Link>
         </div>
         <div className={styles["supermarket-container"]}>
           <SiMarketo />

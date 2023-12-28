@@ -1,14 +1,16 @@
-import Header from "@/Components/header/Header";
-import "../styles/globals.css";
-import Footer from "@/Components/footer/Footer";
-import { Provider } from "react-redux";
-import { store, persistor } from '@/Redux/ReduxPersistStore';
-import { PersistGate } from "redux-persist/integration/react";
 import { useEffect, useState } from "react";
-import Spinner from "@/Components/loading/Spinner";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import localFont from "next/font/local";
+import { store, persistor } from "@/Redux/ReduxPersistStore";
+import Header from "@/Components/header/Header";
+import Footer from "@/Components/footer/Footer";
+import Spinner from "@/Components/loading/Spinner";
+import "../styles/globals.css";
 
-const iranSansWeb = localFont({ src: "../public/fonts/Vazirmatn-UI-FD-Regular.ttf" });
+const iranSansWeb = localFont({
+  src: "../public/fonts/Vazirmatn-UI-FD-Regular.ttf",
+});
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 

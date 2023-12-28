@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
-import styles from './SevenIcons.module.css'
 import Link from 'next/link'
+import styles from './SevenIcons.module.css'
 
 const SevenIcons = ({ products }) => {
+
   return (
     <div className={styles['outer-container']}>
       {products.map((item) => {

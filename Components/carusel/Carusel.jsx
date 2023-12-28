@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NextArrow } from "./CaruselArrow";
-import { PrevArrow } from "./CaruselArrow";
 import styles from "./Carusel.module.scss";
+
+import { NextArrow, PrevArrow } from "./CaruselArrow";
 import Card from "../ShoppingCard/Card";
 
 const Carusel = (props) => {
@@ -13,13 +14,13 @@ const Carusel = (props) => {
     adaptiveHeight: true,
     speed: 700,
     centerMode: true,
-    centerPadding: "2em",
+    centerPadding: "10px",
     swipeToSlide: true,
     rtl: true,
     slidesToShow: props.cardsCount,
     slidesToScroll: 1,
-    nextArrow: <NextArrow width="30px" height="30px" />,
-    prevArrow: <PrevArrow width="30px" height="30px" />,
+    nextArrow: <NextArrow  />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 300,

@@ -29,7 +29,10 @@ const ShoppingCartLa = () => {
                 {items.map((item) => {
                   return (
                     <div key={item.id} className={styles["sabad"]}>
-                      <img src={item.indexImageUrl} alt="" />
+                      <div>
+                        <img src={item.indexImageUrl} alt="" />
+                        <ShoppingCartItemCounter productId={item.id} />
+                      </div>
                       <div className={styles["content-container"]}>
                         <h2>{item.name}</h2>
                         <h3>
@@ -38,9 +41,9 @@ const ShoppingCartLa = () => {
                             : item.priceWithDiscount.toLocaleString()}
                         </h3>
                       </div>
-                      <ShoppingCartItemCounter productId={item.id} />
                     </div>
                     //todo: write better css for counter
+                    //todo ; show price with dicount
                   );
                 })}
               </div>

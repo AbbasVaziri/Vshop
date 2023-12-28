@@ -8,11 +8,8 @@ const shoppingCart = () => {
       <div className={styles["container-shopping-card"]}>
         <ShoppingCartLa />
       </div>
-      <div></div>
     </div>
   );
 };
 
 export default shoppingCart;
-
-

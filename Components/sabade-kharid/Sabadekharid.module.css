@@ -1,3 +1,7 @@
+.container-icon {
+  position: relative;
+}
+
 .icon {
   font-size: 30px;
   margin-left: 10px;
@@ -8,4 +12,10 @@
 .pipe {
   font-size: 30px;
   color: #000;
+}
+
+.count {
+  position: absolute;
+  bottom: 70%;
+  left: 30%;
 }

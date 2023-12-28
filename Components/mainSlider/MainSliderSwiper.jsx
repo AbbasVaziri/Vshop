@@ -2,7 +2,7 @@ import Context from "@/contextApi/Context";
 import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
-import styles from "./MainSliderSwiper.module.scss";
+import styles from "./MainSliderSwiper.module.css";
 import Arrow from "./button/Arrow";
 import "swiper/css";
 import "swiper/css";

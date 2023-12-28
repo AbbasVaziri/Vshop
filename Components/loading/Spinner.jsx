@@ -1,11 +1,12 @@
 import React from 'react'
-import BounceLoader from "react-spinners/BounceLoader";
 import styles from './Spinner.module.css'
+import {FadeLoader} from "react-spinners";
+
 
 const Spinner = () => {
   return (
-    <div className={styles['kossher-maybe']}>
-    <BounceLoader/>
+    <div className={styles['container-spinner']}>
+    <FadeLoader/>
     </div>
   )
 }

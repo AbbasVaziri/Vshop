@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./CheckoutBox.module.css";
 import { useSelector } from "react-redux";
+import styles from "./CheckoutBox.module.css";
 
 const CheckoutBox = () => {
   const { totalPrice, totalPaid } = useSelector((state) => state.shoppingCart);
