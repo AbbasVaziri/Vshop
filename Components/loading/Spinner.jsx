@@ -6,7 +6,7 @@ import {FadeLoader} from "react-spinners";
 const Spinner = () => {
   return (
     <div className={styles['container-spinner']}>
-    <FadeLoader/>
+        <FadeLoader/>
     </div>
   )
 }

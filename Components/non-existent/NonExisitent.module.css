@@ -1,9 +1,11 @@
 .container-non{
+    background-color: #6b000d;
+    padding: 0.5em 3em;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 0, 0);
-    padding: 0.5em 3em;
-    margin-top: 1em;
-    border-radius: 5px;
-    color: white;
+    color:#fff;
+    margin-top: 16px;
+    font-size: 15px;
+    cursor: pointer;
 }

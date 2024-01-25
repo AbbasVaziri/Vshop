@@ -4,19 +4,19 @@ import styles from "./Profile.module.css";
 import { IoEnterOutline } from "react-icons/io5";
 import { PiUserCircleThin } from "react-icons/pi";
 import ExitProfile from "@/Components/userProfile/ExitProfile";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
-  const { token} = useSelector((state) => state.user);
+  const { token } = useSelector((state) => state.user);
   const isAuthenticated = !!token;
 
   return (
     <div className={styles["user-conatiner"]}>
       {isAuthenticated ? (
-        <div className={styles['icon-profile']}>
-          <PiUserCircleThin cursor={"pointer"}/>
-          <div className={styles['exit-user-container']}>
-          <ExitProfile/>
+        <div className={styles["icon-profile"]}>
+          <PiUserCircleThin cursor={"pointer"} />
+          <div className={styles["exit-user-container"]}>
+            <ExitProfile />
           </div>
         </div>
       ) : (

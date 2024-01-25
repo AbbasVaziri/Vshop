@@ -12,7 +12,7 @@ const AmazingSuperMarket = () => {
         <img src="https://www.digikala.com/statics/img/svg/typography/fresh.svg" alt="" />
         <h1>تا 45% تخفیف</h1>
         </div>
-      </div>      
+      </div>
       <div className={styles['left-container']}>
           <div className={styles['container-circle']}>
             <Image width={60} height={60} src="https://dkstatics-public.digikala.com/digikala-products/c9b3a09f3409f83e5519cd47cd4a6d984f8d4c49_1607773462.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80" className={styles['product-image']} alt="" />
@@ -36,7 +36,7 @@ const AmazingSuperMarket = () => {
             <h1>بیش از 90 کالا</h1>
             <FaArrowLeft/>
           </div>
-      </div>  
+      </div>
       </div>
   )
 }

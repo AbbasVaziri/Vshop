@@ -72,7 +72,6 @@ const OfferDigi = () => {
           </div>
           <h3>کاعذ</h3>
         </div>
-
         <div className={styles["Section-container"]}>
           <div className={styles["container-image"]}>
             <Image

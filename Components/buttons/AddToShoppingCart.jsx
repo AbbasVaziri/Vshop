@@ -12,7 +12,7 @@ const ShoppingCartItemCounter = ({ product }) => {
 
   return (
     <div className={styles["outer-container"]} onClick={clickHandler}>
-      <span>خرید</span>
+      <span>افزودن به سبد</span>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-
 export function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -12,13 +11,14 @@ export function NextArrow(props) {
         height: "50px",
         margin: "auto",
         zIndex: "1",
-        marginRight:"10px",
-        color:"white"
+        marginRight: "10px",
+        color: "white",
       }}
       onClick={onClick}
     />
   );
 }
+
 export function PrevArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -30,8 +30,8 @@ export function PrevArrow(props) {
         margin: "auto",
         height: "50px",
         zIndex: "1",
-        marginLeft:"15px",
-        color:"white"
+        marginLeft: "15px",
+        color: "white",
       }}
       onClick={onClick}
     />

@@ -1,5 +1,5 @@
 .main-wrapper {
-  height: 65vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,12 +16,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
 }
 
 .brand-logo {
   margin: auto;
   display: flex;
-  width: 60%;
+  width: 55px;
 }
 
 .authentication-content {

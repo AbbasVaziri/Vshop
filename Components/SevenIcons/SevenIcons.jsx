@@ -3,7 +3,6 @@ import Link from 'next/link'
 import styles from './SevenIcons.module.css'
 
 const SevenIcons = ({ products }) => {
-
   return (
     <div className={styles['outer-container']}>
       {products.map((item) => {

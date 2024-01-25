@@ -19,7 +19,7 @@ const Carusel = (props) => {
     rtl: true,
     slidesToShow: props.cardsCount,
     slidesToScroll: 1,
-    nextArrow: <NextArrow  />,
+    nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
@@ -76,9 +76,13 @@ const Carusel = (props) => {
   };
 
   return (
-    <Slider {...settings} >
+    <Slider {...settings}>
       {props.data.map((item) => {
-        return <Card key={item.id} product={item} />;
+        return (
+          <div key={item.id}>
+            <Card product={item} />
+          </div>
+        );
       })}
     </Slider>
   );

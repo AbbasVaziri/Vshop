@@ -31,7 +31,7 @@ function ProductImagesUnderAmazing() {
       />
       <Image
         src={
-          "https://dkstatics-public.digikala.com/digikala-adservice-banners/cbde2f4d9424b696a1987cc9d7f33675634568da_1701864906.jpg?x-oss-process=image/quality,q_95/format,webp"
+          "https://dkstatics-public.digikala.com/digikala-adservice-banners/c136d35001896bb847c6ca90246811e09d8e8a3c_1702498334.jpg?x-oss-process=image/quality,q_95/format,webp"
         }
         width={320}
         height={220}

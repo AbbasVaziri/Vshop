@@ -14,25 +14,25 @@ const ShoppingCartItemCounter = ({ productId }) => {
   const dispatch = useDispatch();
   const shoppingCart = useSelector((state) => state.shoppingCart);
   const itemCount = shoppingCart.items.filter(
-    (item) => item.id === productId,
+    (item) =>  item.id === productId,
   )[0].count;
 
   return (
-<>
-    <div className={styles["outer-container"]}>
-      <span onClick={() => dispatch(increaseCount(productId))}>+</span>
-      <span>{itemCount}</span>
-      {itemCount === 1 ? (
-        <BsFillTrashFill
-          size={"16px"}
-          cursor={"pointer"}
-          onClick={() => dispatch(removeItem(productId))}
-        />
-      ) : (
-        <span onClick={() => dispatch(decreaseCount(productId))}>-</span>
-      )}
-    </div>
-</>
+    <>
+      <div className={styles["outer-container"]}>
+        <span onClick={() => dispatch(increaseCount(productId))}>+</span>
+        <span>{itemCount}</span>
+        {itemCount === 1 ? (
+          <BsFillTrashFill
+            size={"16px"}
+            cursor={"pointer"}
+            onClick={() => dispatch(removeItem(productId))}
+          />
+        ) : (
+          <span onClick={() => dispatch(decreaseCount(productId))}>-</span>
+        )}
+      </div>
+    </>
   );
 };
 

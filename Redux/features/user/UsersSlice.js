@@ -1,7 +1,5 @@
   import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
   import { POST } from "@/repository/AxiosRepository";
-  import Cookies from "js-cookie";
-  import {error} from "next/dist/build/output/log";
 
   const INITIAL_STATE = {
     token: null,

@@ -1,12 +1,11 @@
-import Context from "@/contextApi/Context";
 import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
-import styles from "./MainSliderSwiper.module.css";
-import Arrow from "./button/Arrow";
-import "swiper/css";
 import "swiper/css";
 import "swiper/css/pagination";
+import styles from "./MainSliderSwiper.module.css";
+import Arrow from "./button/Arrow";
+import Context from "@/contextApi/Context";
 
 const MainSliderSwiper = () => {
   const { mainSliderImages } = useContext(Context);
@@ -31,7 +30,7 @@ const MainSliderSwiper = () => {
           {mainSliderImages.map((product) => {
             return (
               <div key={product.id}>
-                <SwiperSlide className="swiper-items">
+                <SwiperSlide>
                   <img
                     src={product.original}
                     alt=""

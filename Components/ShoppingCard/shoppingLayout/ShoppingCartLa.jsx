@@ -13,7 +13,6 @@ const ShoppingCartLa = () => {
     return <EmptyShoppingCard />;
   } else
     return (
-      <>
         <div className={styles["container-all"]}>
           <header className={styles["header"]}>
             <h1>خرید بعدی</h1>
@@ -29,21 +28,17 @@ const ShoppingCartLa = () => {
                 {items.map((item) => {
                   return (
                     <div key={item.id} className={styles["sabad"]}>
-                      <div>
-                        <img src={item.indexImageUrl} alt="" />
-                        <ShoppingCartItemCounter productId={item.id} />
-                      </div>
+                      <img src={item.indexImageUrl} alt="" />
+                      <ShoppingCartItemCounter productId={item.id} />
                       <div className={styles["content-container"]}>
                         <h2>{item.name}</h2>
                         <h3>
-                          {item.priceWithDiscount === 0
-                            ? item.price.toLocaleString()
-                            : item.priceWithDiscount.toLocaleString()}
+                          {item.incredibleOffers
+                            ? item.priceWithDiscount.toLocaleString()
+                            : item.price.toLocaleString()}
                         </h3>
                       </div>
                     </div>
-                    //todo: write better css for counter
-                    //todo ; show price with dicount
                   );
                 })}
               </div>
@@ -51,7 +46,6 @@ const ShoppingCartLa = () => {
             <CheckoutBox />
           </div>
         </div>
-      </>
     );
 };
 

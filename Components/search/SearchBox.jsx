@@ -16,7 +16,7 @@ const SearchBox = () => {
     <>
       <div className={styles["search-bar"]}>
         <Link href="/">
-        <img
+          <img
           src={"/images/logo.svg"}
           className={styles["logo-digi"]}
           alt=""

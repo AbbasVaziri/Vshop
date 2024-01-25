@@ -56,5 +56,20 @@
 
 .button-counter {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.message-addtoShopping{
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.link-shoppingcart{
+  color: #19bfd3;
 }

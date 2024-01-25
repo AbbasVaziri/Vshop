@@ -5,6 +5,7 @@ import AddToShoppingCart from "../buttons/AddToShoppingCart";
 import ShoppingCartItemCounter from "../buttons/ShoppingCartItemCounter";
 import NonExistent from "../non-existent/NonExistent";
 import styles from "./Card.module.css";
+import Link from "next/link";
 
 const Card = ({ product }) => {
   const shoppingCart = useSelector((state) => state.shoppingCart);
@@ -62,6 +63,19 @@ const Card = ({ product }) => {
 
       {shoppingCart.items.find((item) => item.id === product.id) ? (
         <div className={styles["button-counter"]}>
+          <div className={styles["message-addtoShopping"]}>
+            <h3>در سبد شما</h3>
+            <div>
+              مشاهده
+              <Link
+                href={"/shoppingCart"}
+                className={styles["link-shoppingcart"]}
+              >
+                {" "}
+                سبد خرید
+              </Link>
+            </div>
+          </div>
           <ShoppingCartItemCounter productId={product.id} />
         </div>
       ) : product.stock !== 0 ? (

@@ -4,7 +4,6 @@ import { PersistGate } from "redux-persist/integration/react";
 import localFont from "next/font/local";
 import { store, persistor } from "@/Redux/ReduxPersistStore";
 import Header from "@/Components/header/Header";
-import Footer from "@/Components/footer/Footer";
 import Spinner from "@/Components/loading/Spinner";
 import "../styles/globals.css";
 
@@ -26,10 +25,9 @@ export default function App({ Component, pageProps }) {
         <Spinner />
       ) : (
         <Provider store={store}>
-          <PersistGate persistor={persistor}>
+          <PersistGate loading={null} persistor={persistor}>
             <Header />
             <Component {...pageProps} />
-            <Footer />
           </PersistGate>
         </Provider>
       )}

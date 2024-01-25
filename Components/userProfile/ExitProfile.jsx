@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./ExitProfile.module.css";
 import { FaArrowRightToBracket } from "react-icons/fa6";
-import { useDispatch } from 'react-redux';
-import {logout} from "@/Redux/features/user/UsersSlice";
+import { useDispatch } from "react-redux";
+import { logout } from "@/Redux/features/user/UsersSlice";
 
 const ExitProfile = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   return (
     <>
