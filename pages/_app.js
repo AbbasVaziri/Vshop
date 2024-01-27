@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
         <Spinner />
       ) : (
         <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
+          <PersistGate persistor={persistor}>
             <Header />
             <Component {...pageProps} />
           </PersistGate>

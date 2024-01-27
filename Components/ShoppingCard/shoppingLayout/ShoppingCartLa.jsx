@@ -30,7 +30,7 @@ const ShoppingCartLa = () => {
                     <div key={item.id} className={styles["sabad"]}>
                       <img src={item.indexImageUrl} alt="" />
                       <ShoppingCartItemCounter productId={item.id} />
-                      <div className={styles["content-container"]}>
+                      <div key={item.id} className={styles["content-container"]}>
                         <h2>{item.name}</h2>
                         <h3>
                           {item.incredibleOffers

@@ -8,15 +8,16 @@ import Context from "@/contextApi/Context";
 import { GETT } from "@/repository/FetchApiRepository";
 
 export default function Home(props) {
+  //I think It's better to use props
   return (
     <>
       <Context.Provider value={{ mainSliderImages: props.mainSliderResponse }}>
         <MainSliderSwiper />
-        <SevenIcons products={props.sevenIconsResponse} />
-        <IncredibleOffers data={props.incredibleOffersResponse} />
       </Context.Provider>
-      <AmazingSuperMarket />
+      <SevenIcons products={props.sevenIconsResponse} />
+      <IncredibleOffers data={props.incredibleOffersResponse} />
       <ProductImagesUnderAmazing />
+      <AmazingSuperMarket />
       <ShopByCategory />
     </>
   );

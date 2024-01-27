@@ -32,6 +32,7 @@ const MainSliderSwiper = () => {
               <div key={product.id}>
                 <SwiperSlide>
                   <img
+                      key={product.id}
                     src={product.original}
                     alt=""
                     className={styles["slider-images"]}

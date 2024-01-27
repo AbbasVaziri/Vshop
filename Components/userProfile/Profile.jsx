@@ -11,7 +11,7 @@ const Profile = () => {
   const isAuthenticated = !!token;
 
   return (
-    <div className={styles["user-conatiner"]}>
+    <>
       {isAuthenticated ? (
         <div className={styles["icon-profile"]}>
           <PiUserCircleThin cursor={"pointer"} />
@@ -28,7 +28,7 @@ const Profile = () => {
           </div>
         </Link>
       )}
-    </div>
+    </>
   );
 };
 

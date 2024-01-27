@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 const INITIAL_STATE = { items: [], totalCount: 0, totalPrice: 0, totalPaid: 0 };
 
 const recalculateTotals = (state) => {

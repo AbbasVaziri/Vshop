@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
 import { IoIosSearch } from "react-icons/io";
-import Link from 'next/link';
+import Link from "next/link";
 import styles from "./SearchBox.module.css";
 
 const SearchBox = () => {
@@ -17,17 +17,22 @@ const SearchBox = () => {
       <div className={styles["search-bar"]}>
         <Link href="/">
           <img
-          src={"/images/logo.svg"}
-          className={styles["logo-digi"]}
-          alt=""
+            src={"/images/logo.svg"}
+            className={styles["logo-digi"]}
+            alt=""
           />
-          </Link>
+        </Link>
         <div className={styles["container-search"]}>
           <input
             type="text"
             ref={textForSearch}
             className={styles["search-feild"]}
             placeholder="جستجو"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                clickHandler();
+              }
+            }}
           />
           <IoIosSearch
             onClick={clickHandler}

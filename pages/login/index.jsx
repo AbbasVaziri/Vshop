@@ -17,7 +17,7 @@ const FORM_STEPS = {
 const index = () => {
   const [formStep, setFormStep] = useState(FORM_STEPS.USERNAME);
   const dispatch = useDispatch();
-  const { loginUserLoading ,error , token} = useSelector((state) => state.user);
+  const { loginUserLoading, error, token } = useSelector((state) => state.user);
   const router = useRouter();
   const isAuthenticated = !!token;
 
@@ -109,8 +109,8 @@ const index = () => {
       <div className={styles["login-container"]}>
         <div className={styles["logo-wrapper"]}>
           <img
-              src={"/images/logo.svg"}
-              alt="Logo"
+            src={"/images/logo.svg"}
+            alt="Logo"
             className={styles["brand-logo"]}
           />
           <IoMdArrowForward

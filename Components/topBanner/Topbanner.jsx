@@ -4,7 +4,7 @@ import styles from "./Topbanner.module.css";
 import { GET } from "@/repository/AxiosRepository";
 
 const Topbanner = () => {
-  const [topBannerData, setTopBannerData] = useState({});
+  const [topBannerData, setTopBannerData] = useState("");
 
   useEffect(() => {
     GET("/topBanner").then((response) => setTopBannerData(response.data));
