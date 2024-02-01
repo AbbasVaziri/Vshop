@@ -12,6 +12,12 @@ const SearchBox = () => {
     router.push(`/Products/search/${textForSearch.current.value}`);
   };
 
+  const SearchWithEnter = (e) => {
+      if (e.key === "Enter") {
+        clickHandler();
+      }
+  }
+
   return (
     <>
       <div className={styles["search-bar"]}>
@@ -28,11 +34,7 @@ const SearchBox = () => {
             ref={textForSearch}
             className={styles["search-feild"]}
             placeholder="جستجو"
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                clickHandler();
-              }
-            }}
+            onKeyDown={SearchWithEnter}
           />
           <IoIosSearch
             onClick={clickHandler}
