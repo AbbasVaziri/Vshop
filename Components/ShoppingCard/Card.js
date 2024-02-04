@@ -68,7 +68,7 @@ const Card = ({ product }) => {
             <div>
               مشاهده
               <Link
-                href={"/shoppingCart"}
+                href={"/shoppingcart"}
                 className={styles["link-shoppingcart"]}
               >
                 {" "}

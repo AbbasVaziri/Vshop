@@ -9,7 +9,7 @@ const Sabadekharid = () => {
 
   return (
     <>
-      <Link href={"/shoppingCart"} className={styles['container-icon']}>
+      <Link href={"/shoppingcart"} className={styles['container-icon']}>
         <TfiShoppingCart className={styles["icon"]} />
         <span className={styles["count"]}>{totalCount}</span>
       </Link>

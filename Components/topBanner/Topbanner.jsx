@@ -13,9 +13,9 @@ const Topbanner = () => {
   return (
     <div className={styles["outer-container"]}>
       <Image
+        src={topBannerData.imageUrl}
         className={styles["banner"]}
         fill
-        src={topBannerData.imageUrl}
         alt=""
       />
     </div>

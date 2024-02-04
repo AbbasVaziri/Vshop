@@ -7,7 +7,7 @@ const SevenIcons = ({ products }) => {
     <div className={styles['outer-container']}>
       {products.map((item) => {
         return (
-          <Link href={`/Products/category/${item.url}`}>
+          <Link href={`/Products/category/${item.url}`} id={item.id}>
             <div className={styles['item-container']}>
               <Image src={`/images/${item.iconName}`} height={50} width={50} />
               <label className={styles['label-container']}>{item.label}</label>
