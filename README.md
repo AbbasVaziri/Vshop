@@ -9,6 +9,5 @@
 <p>• custome carrousel with React-Slick like exactly Digikala</p>
 
 <h2>Tech Stack 💻</h2>
-<p>The following libraries and tools were utilized in the project:
-
-</p>
+<p>The following libraries and tools were utilized in the project:</p>
+<p>Nextjs</p>
