@@ -7,3 +7,8 @@
 <p>• shoppingCart with Redux Toolkit and persist</p>
 <p>• responsible slider with swiper</p>
 <p>• custome carrousel with React-Slick like exactly Digikala</p>
+
+<h2>Tech Stack 💻</h2>
+<p>The following libraries and tools were utilized in the project:
+
+</p>
