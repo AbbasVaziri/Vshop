@@ -10,4 +10,4 @@
 
 <h2>Tech Stack 💻</h2>
 <p>The following libraries and tools were utilized in the project:</p>
-<p fontsize="20px">• Nextjs</p>
+<p>• Nextjs</p>
