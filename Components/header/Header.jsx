@@ -27,7 +27,3 @@ const Header = () => {
 };
 
 export default Header;
-
-{
-  /* <Search/> */
-}

@@ -1,8 +1,7 @@
 .main-wrapper {
-  height: 70vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 10%;
 }
 
 .login-container {
@@ -22,7 +21,6 @@
 .brand-logo {
   margin: auto;
   display: flex;
-  width: 55px;
 }
 
 .authentication-content {

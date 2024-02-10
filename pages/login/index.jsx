@@ -8,6 +8,7 @@ import { BeatLoader } from "react-spinners";
 import { loginUser, resetError } from "@/Redux/features/user/UsersSlice";
 import LoginSignupErrorMessage from "@/Components/messageComponents/LoginSignupErrorMessage";
 import styles from "./Login.module.css";
+import Link from "next/link";
 
 const FORM_STEPS = {
   USERNAME: "username",
@@ -20,7 +21,6 @@ const index = () => {
   const { loginUserLoading, error, token } = useSelector((state) => state.user);
   const router = useRouter();
   const isAuthenticated = !!token;
-
   useEffect(() => {
     if (isAuthenticated) {
       router.push("/");
@@ -29,7 +29,6 @@ const index = () => {
       dispatch(resetError());
     };
   }, [isAuthenticated, router, dispatch]);
-
   const validationSchemaUsername = Yup.object({
     username: Yup.string()
       .test(
@@ -43,15 +42,12 @@ const index = () => {
       )
       .required("لطفا این قسمت را خالی نگذارید."),
   });
-
   const validationSchemaPassword = Yup.object({
     password: Yup.string().required("Password is required"),
   });
-
   const initialValuesUsername = {
     username: "",
   };
-
   const initialValuesPassword = {
     password: "",
   };
@@ -135,7 +131,7 @@ const index = () => {
           {error ? (
             <h1>
               <div className={styles["error-enter-user"]}>
-                <p>{error}</p>
+                <p>{error}<Link href={'/signup'}> ثبت نام</Link> </p>
               </div>
             </h1>
           ) : null}
@@ -158,6 +154,8 @@ const index = () => {
       </div>
     );
   };
+
+  // todo: یه مقدار تایم بگیرم برای اسپینر که قراره لود بشه این خیلی کمه
 
   return !isAuthenticated ? (
     <div className={styles["main-wrapper"]}>
