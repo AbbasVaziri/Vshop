@@ -17,7 +17,7 @@ I built an e-commerce web-application similar to Digikala.com, focusing on speed
 <h2>Tech Stack 💻</h2>
 <p>The following libraries and tools were utilized in the project:</p>
 <p>• Nextjs</p>
-<p>• Redux , Redux-toolkit</p>
+<p>• Redux , RTK</p>
 <p>• Formik , Yup</p>
 <p>• React-slick and swiper </p>
 <p>• axios</p>
