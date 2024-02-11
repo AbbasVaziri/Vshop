@@ -4,7 +4,7 @@
 
 <h2>description</h2>
 <p>
-I built an e-commerce platform similar to Digikala.com, focusing on speed and a cool look thanks to Next.js. To make shopping easy, I used Redux and RTK for the cart, so everything stays organized. I added some neat slides for showing off products with Swiper, and for all the signup and login forms, I chose Formik to keep things straightforward and Yup for making sure the info is right. Plus, I made sure everything's secure and talking smoothly to the server with Swagger, keeping user logins safe
+I built an e-commerce platform similar to Digikala.com, focusing on speed and a cool look thanks to Next.js. To make shopping easy, I used Redux and RTK for the shopping cart, so everything stays organized. I added some neat slides for showing off products with Swiper, and for all the signup and login forms, I chose Formik to keep things straightforward and Yup for making sure the info is right. Plus, I made sure everything's secure and talking smoothly to the server with Swagger, keeping user logins safe
 </p>
 
 <h2>Features 🚀</h2>
