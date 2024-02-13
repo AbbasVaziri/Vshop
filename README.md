@@ -86,5 +86,4 @@ yarn dev
 ```
 
 Open http://localhost:3000 with your browser to see the result.
-`Ensure to replace placeholders and add any additional links or details necessary for clarity. This formatted README.md will help your project's users to easily navigate through the installation and running processes, enhancing their experience.`
 
