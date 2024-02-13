@@ -28,6 +28,8 @@ I built an e-commerce platform similar to Digikala.com, focusing on speed and a 
 <h2>installation</h2>
 <p>To start this application, you need to have the data file of this program, which I will put in another repository.
 If you've never worked with java it's possible it might be hard at first to run the back-end on localhost, but I'll try my best to fully explain how to work with it.</p>
+<p>MySQL Database: This application requires a MySQL database.</p>
+
 
 <h3>Before running the jar file</h3>
 <p>ensure you have the following installed:
