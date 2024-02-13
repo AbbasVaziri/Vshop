@@ -36,6 +36,39 @@ If you've never worked with java it's possible it might be hard at first to run 
 </p>
 <p>MySQL Database: This application requires a MySQL database.</p>
 
+<h2>install java and run jar file</h2>
+
+1. **Download the Jar File**: Download the latest version of the application jar file from the GitHub repository's Releases section.
+
+2. **Prepare MySQL Database**:
+   - Ensure your MySQL database is running.
+   - Create a database for the application, if necessary.
+
+3. **Configure Database Connection**:
+   - You need to configure the database connection by setting your MySQL credentials in the `application.properties` file within the jar.
+   - To access and modify the `application.properties` file, you can either extract the jar file using any standard archive tool (like WinRAR, 7-Zip) or directly edit the file within the archive:
+     - Extract the jar: `jar xf yourapplication.jar`
+     - Navigate to the extracted directory and open the `application.properties` file in a text editor.
+     - Modify the database connection properties:
+       ```
+       spring.datasource.url=jdbc:mysql://localhost:3306/yourdatabasename
+       spring.datasource.username=yourusername
+       spring.datasource.password=yourpassword
+       ```
+     - Replace `yourdatabasename`, `yourusername`, and `yourpassword` with your actual database name, username, and password.
+   - If you extracted and modified the properties file, repackage the jar file: `jar cf yourapplication.jar -C path/to/extracted/folder/ .`
+
+
+To run the application, execute the following command in your terminal or command prompt:
+```
+java -jar path/to/yourapplication.jar
+```
+Make sure to replace `path/to/yourapplication.jar` with the actual path to the jar file you downloaded.
+
+## Troubleshooting
+
+- **Java Not Found**: Ensure Java is installed and properly set up in your system's PATH.
+- **Database Connection Issues**: Verify that your MySQL server is running and that the `application.properties` file contains the correct connection details.
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
