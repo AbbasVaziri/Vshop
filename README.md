@@ -71,9 +71,9 @@ Make sure to replace `path/to/yourapplication.jar` with the actual path to the j
 - **Database Connection Issues**: Verify that your MySQL server is running and that the `application.properties` file contains the correct connection details.
 
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Started with Nextjs
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 First , install dependencies:
 ```bash
 npm install
