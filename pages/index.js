@@ -8,7 +8,6 @@ import Context from "@/contextApi/Context";
 import { GETT } from "@/repository/FetchApiRepository";
 
 export default function Home(props) {
-  //I think It's better to use props
   return (
     <>
       <Context.Provider value={{ mainSliderImages: props.mainSliderResponse }}>
@@ -24,6 +23,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps(context) {
+    // await new Promise(resolve => {setTimeout(resolve, 5000);})
   const mainSliderRequest = await GETT("/public/mainSlider");
   const mainSliderResponse = await mainSliderRequest.json();
 

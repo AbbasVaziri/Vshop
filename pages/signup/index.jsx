@@ -7,7 +7,6 @@ import { POST } from "@/repository/AxiosRepository";
 
 function useDebounce(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value);
-
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedValue(value);
@@ -15,7 +14,6 @@ function useDebounce(value, delay) {
 
     return () => clearTimeout(handler);
   }, [value, delay]);
-
   return debouncedValue;
 }
 
@@ -95,7 +93,7 @@ const index = () => {
                   {errors.phoneNumber &&
                     touched.phoneNumber &&
                     debouncedPhoneNumber === values.phoneNumber && (
-                      <div>{errors.phoneNumber}</div>
+                      <div className={styles['error-message']}>{errors.phoneNumber}</div>
                     )}
                   <Field
                     name="password"
@@ -104,7 +102,9 @@ const index = () => {
                     className={styles["user-input"]}
                     placeholder={"رمز عبور"}
                   />
-                  {errors.password && touched.password && (<div>{errors.password}</div>)}
+                  {errors.password && touched.password && (
+                    <div className={styles['error-message']}>{errors.password}</div>
+                  )}
                   <button type="submit" className={styles["login-btn"]}>
                     ورود
                   </button>
