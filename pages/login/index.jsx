@@ -21,6 +21,7 @@ const index = () => {
   const { loginUserLoading, error, token } = useSelector((state) => state.user);
   const router = useRouter();
   const isAuthenticated = !!token;
+
   useEffect(() => {
     if (isAuthenticated) {
       router.push("/");
@@ -29,6 +30,7 @@ const index = () => {
       dispatch(resetError());
     };
   }, [isAuthenticated, router, dispatch]);
+
   const validationSchemaUsername = Yup.object({
     username: Yup.string()
       .test(
@@ -83,7 +85,7 @@ const index = () => {
               type="text"
               name="username"
               id="username"
-              placeholder="شماره موبایل یا ایمیل"
+              placeholder=""
             />
             <ErrorMessage name="username" component={LoginSignupErrorMessage} />
             <button
@@ -154,8 +156,6 @@ const index = () => {
       </div>
     );
   };
-
-  // todo: یه مقدار تایم بگیرم برای اسپینر که قراره لود بشه این خیلی کمه
 
   return !isAuthenticated ? (
     <div className={styles["main-wrapper"]}>

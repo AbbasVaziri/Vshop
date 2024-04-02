@@ -10,7 +10,7 @@ const recalculateTotals = (state) => {
     state.totalPaid +=
       item.priceWithDiscount !== 0 ? item.priceWithDiscount : item.price;
     state.totalPrice +=
-      item.priceWithDiscount !== 0 ? item.priceWithDiscount : item.price;
+      item.bn  !== 0 ? item.priceWithDiscount : item.price;
   });
 };
 

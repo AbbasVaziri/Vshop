@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  margin-left: 20px;
+  margin-left: 50px;
   gap: 20px;
+}
+
+.loading-container{
+  margin-left: 100px;
 }

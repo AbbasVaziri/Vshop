@@ -7,11 +7,11 @@ import Header from "@/Components/header/Header";
 import Spinner from "@/Components/loading/Spinner";
 import "../styles/globals.css";
 import { useRouter } from "next/router";
+import Footer from "@/Components/footer/Footer";
 
 const iranSansWeb = localFont({
   src: "../public/fonts/Vazirmatn-UI-FD-Regular.ttf",
 });
-
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const { pathname } = router;
@@ -19,23 +19,26 @@ export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setLoading(false);
     }, 2000);
+    return () => clearTimeout(timeout);
   }, []);
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <div className={iranSansWeb.className}>
-      {loading ? (
-        <Spinner />
-      ) : (
-        <Provider store={store}>
-          <PersistGate persistor={persistor}>
-            {!isAuthPage && <Header />}
-            <Component {...pageProps} />
-          </PersistGate>
-        </Provider>
-      )}
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          {!isAuthPage && <Header />}
+          <Component {...pageProps} />
+          {!isAuthPage && <Footer />}
+        </PersistGate>
+      </Provider>
+      )
     </div>
   );
 }

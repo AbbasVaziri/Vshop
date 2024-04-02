@@ -16,9 +16,7 @@ const TextForSearch = ({ data }) => {
 export default TextForSearch;
 
 export async function getServerSideProps(context) {
-  const response = await GETT(
-    `/products/search/${context.params.textForSearch}`,
-  );
+  const response = await GETT(`/products/search/${context.params.textForSearch}`,);
   const data = await response.json();
 
   if (data.length === 0) {
