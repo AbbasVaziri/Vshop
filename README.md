@@ -1,6 +1,9 @@
 # Vshop (inspired by digikala.com)
 <img src="https://github.com/AbbasVaziri/Vshop/assets/122804004/68b5b0f9-4d02-49b1-bf56-4155b6a440f4" alt="">
 
+> **توجه: در ابتدای ساخت این پروژه از روش‌ها و ابزارهایی مانند Context API، Redux، axios و fetch استفاده شده است که ممکن است با بهترین شیوه‌های حال حاضر تطابق نداشته باشد، اما تلاش شده است تا در ادامه، کد بهبود یابد.**
+
+
 I built an e-commerce platform similar to Digikala.com, focusing on speed and a cool look thanks to Next.js. To make shopping easy, I used Redux and RTK for the shopping cart, so everything stays organized. I added some neat slides for showing off products with Swiper, and for all the signup and login forms, I chose Formik to keep things straightforward and Yup for making sure the info is right. Plus, I made sure everything's secure and talking smoothly to the server with Swagger, keeping user logins safe.
 
 ## Features 🚀
