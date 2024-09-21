@@ -1,7 +1,6 @@
 # Vshop (inspired by digikala.com)
 <img src="https://github.com/AbbasVaziri/Vshop/assets/122804004/68b5b0f9-4d02-49b1-bf56-4155b6a440f4" alt="">
 
-> **توجه: در این پروژه از تکنولوژی‌ها و ابزارهای مختلفی مانند Context API، Redux، axios و fetch استفاده شده است تا بتوانم این تکنولوژی‌ها را تست کنم و تفاوت‌های آنها را درک کنم. ممکن است برخی از این روش‌ها با بهترین شیوه‌های حال حاضر تطابق نداشته باشند، اما هدف من یادگیری و آزمایش این ابزارها بوده است.**
 
 > **Note: In this project, various technologies and tools such as Context API, Redux, axios, and fetch have been used to test and understand their differences. Some of these approaches may not align with current best practices, but my goal was to learn and experiment with these tools.**
 
